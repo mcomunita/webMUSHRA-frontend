@@ -7,7 +7,7 @@ bufferSize: 2048
 stopOnErrors: true
 showButtonPreviousPage: true
 # remoteService: service/write.php
-remoteService: https://webmushra-backend.onrender.com/service/write_aws-s3.php
+remoteService: https://webmushra-backend.onrender.com/service/write_aws-s3_test.php
 
 
 pages:
