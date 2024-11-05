@@ -6,8 +6,8 @@ testId: mushra_nowav
 bufferSize: 2048
 stopOnErrors: true
 showButtonPreviousPage: true
+remoteService: https://mushra-backend.onrender.com/write_aws-s3_test.php
 # remoteService: service/write.php
-remoteService: https://webmushra-backend.onrender.com/service/write_aws-s3_test.php
 
 
 pages:
