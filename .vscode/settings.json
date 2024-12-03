@@ -1,3 +1,9 @@
 {
-    "prettier.configPath": ".prettierrc.yml"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",  // Set Prettier as the default formatter.
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"  // Use Prettier specifically for JavaScript files.
+    },
+    "prettier.configPath": ".prettierrc.yml",
+    "editor.formatOnSave": true
+
 }
