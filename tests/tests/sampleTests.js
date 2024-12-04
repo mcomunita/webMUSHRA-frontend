@@ -5,47 +5,80 @@ This source code is protected by copyright law and international treaties. This 
 
 **************************************************************************/
 
-
-var configFile = new Array;
-for (i = 0; i < configs.length; i++) { 
-	configFile[i] = '../configs/'+configs[i]+'.yaml'; 
+var configFile = new Array()
+for (i = 0; i < configs.length; i++) {
+	configFile[i] = '../configs/' + configs[i] + '.yaml'
 }
-	
-$q(function() {
-	$q('#testframe0').load(function() {
-		YAML.load(configFile[0], (function(result) {
-			var config = result;
-			$q('#testframe0').get(0).contentWindow.pageTemplateRenderer.addCallbackEventRefreshed(function() {
-				QUnit.module("Testframe0");
-				QUnit.test('Check Headers', 2, function() {  
-					QUnit.strictEqual($q('#testframe0').contents().find('#header').get(0).innerHTML, config.testname, "Header Matches");
-					QUnit.strictEqual($q('#testframe0').contents().find('#page_header').get(0).innerHTML, config.pages[0].name, "Page Header Matches");
-				});
-				QUnit.test('Check Button Texts at Testframe0', 5, function() {  
-				
-					QUnit.strictEqual($q('#testframe0').contents().find('#pause').get(0).innerHTML, "Pause", "Pause Button Text Matches");
-					QUnit.strictEqual($q('#testframe0').contents().find('#playCondition0').get(0).innerHTML, "Play", "Play Button Text Matches");
-					QUnit.strictEqual($q('#testframe0').contents().find('#__button_next').get(0).innerHTML, "Next", "Next Button Text Matches");
-					for (i = 0; i < config.pages[0].response.length; i++) { 
-						QUnit.strictEqual($q('#testframe0').contents().find('#1__response_'+i).get(0).value, config.pages[0].response[i].value, "Likert"+i+" Button Text Matches");
-					}
-				});
-			});
-		}));
-	});
-	
-	$q('#testframe1').load(function(){		
-		YAML.load(configFile[1], (function(result) {
-			var config = result;
-			$q('#testframe1').get(0).contentWindow.pageTemplateRenderer.addCallbackEventRefreshed(function() {
-				QUnit.module( "Testframe1");
-				QUnit.test('check if name matches', 1, function() { 
-					QUnit.strictEqual($q('#testframe1').contents().find('#page_header').get(0).innerHTML, config.pages[0].name, "page_header matches");
-				});
-			});
-		}));
-	});
-		
+
+$q(function () {
+	$q('#testframe0').load(function () {
+		YAML.load(configFile[0], function (result) {
+			var config = result
+			$q('#testframe0')
+				.get(0)
+				.contentWindow.pageTemplateRenderer.addCallbackEventRefreshed(function () {
+					QUnit.module('Testframe0')
+					QUnit.test('Check Headers', 2, function () {
+						QUnit.strictEqual(
+							$q('#testframe0').contents().find('#header').get(0).innerHTML,
+							config.testname,
+							'Header Matches'
+						)
+						QUnit.strictEqual(
+							$q('#testframe0').contents().find('#page_header').get(0).innerHTML,
+							config.pages[0].name,
+							'Page Header Matches'
+						)
+					})
+					QUnit.test('Check Button Texts at Testframe0', 5, function () {
+						QUnit.strictEqual(
+							$q('#testframe0').contents().find('#pause').get(0).innerHTML,
+							'Pause',
+							'Pause Button Text Matches'
+						)
+						QUnit.strictEqual(
+							$q('#testframe0').contents().find('#playCondition0').get(0).innerHTML,
+							'Play',
+							'Play Button Text Matches'
+						)
+						QUnit.strictEqual(
+							$q('#testframe0').contents().find('#__button_next').get(0).innerHTML,
+							'Next',
+							'Next Button Text Matches'
+						)
+						for (i = 0; i < config.pages[0].response.length; i++) {
+							QUnit.strictEqual(
+								$q('#testframe0')
+									.contents()
+									.find('#1__response_' + i)
+									.get(0).value,
+								config.pages[0].response[i].value,
+								'Likert' + i + ' Button Text Matches'
+							)
+						}
+					})
+				})
+		})
+	})
+
+	$q('#testframe1').load(function () {
+		YAML.load(configFile[1], function (result) {
+			var config = result
+			$q('#testframe1')
+				.get(0)
+				.contentWindow.pageTemplateRenderer.addCallbackEventRefreshed(function () {
+					QUnit.module('Testframe1')
+					QUnit.test('check if name matches', 1, function () {
+						QUnit.strictEqual(
+							$q('#testframe1').contents().find('#page_header').get(0).innerHTML,
+							config.pages[0].name,
+							'page_header matches'
+						)
+					})
+				})
+		})
+	})
+
 	/*});
 	
 	//MORE TESTS TO COME
@@ -66,4 +99,4 @@ $q(function() {
 	
 	
 	*/
-});
+})
