@@ -8,13 +8,15 @@ a MUltiple Stimuli with Hidden Reference and Anchor ([MUSHRA](https://en.wikiped
 ---
 - [Introduction](#introduction)
 - [Features](#features)
-- [External Data](#external-data)
-- [Contributions](#contributions)
-- [Analog](#analog)
-- [Analog Parametric](#analog-parametric)
-- [Digital](#digital)
-- [Digital Parametric](#digital-parametric)
-- [Sources](#sources)
+- [Supported Browsers](#supported-browsers)
+- [Experiment configuration](#experiment-configuration)
+- [Run Locally - PHP Server](#[analog](#run-locally-using-phps-builtin-webserver)
+- [Run Online - GitHub Pages + Render + Amazon S3](#[analog-parametric](#run-online---frontend-github-pages--backend-render--persistent-storage-amazon-s3)
+- [Documentation](#documentation)
+- [Citation](#citation)
+- [References](#references)
+- [Copyright/Licence](#copyrightlicence)
+- [Old README](#old-readme---webmushra)
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Introduction
@@ -48,7 +50,7 @@ Listening tests are widely used to assess the quality of audio systems. In the l
 
 
 
-## Experiment configuration
+## Experiment Configuration
 
 webMUSHRA uses [YAML](https://en.wikipedia.org/wiki/YAML) to configure experiments. 
 
