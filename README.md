@@ -4,7 +4,18 @@ a MUltiple Stimuli with Hidden Reference and Anchor ([MUSHRA](https://en.wikiped
 
 <img width="1000" alt="screen shot 2017-03-08 at 12 38 20" src="https://cloud.githubusercontent.com/assets/72940/23702580/2a49bc82-03fc-11e7-99ea-22d550604a73.png">
 
-
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+---
+- [Introduction](#introduction)
+- [Features](#features)
+- [External Data](#external-data)
+- [Contributions](#contributions)
+- [Analog](#analog)
+- [Analog Parametric](#analog-parametric)
+- [Digital](#digital)
+- [Digital Parametric](#digital-parametric)
+- [Sources](#sources)
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Introduction
 
